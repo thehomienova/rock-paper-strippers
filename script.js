@@ -21,8 +21,6 @@ function getComputerChoice () {
     }
 }
 
-getComputerChoice();
-
 function getHumanChoice () {
     let choice = prompt("Choose rock, paper, or strippers:")
     
@@ -30,3 +28,5 @@ function getHumanChoice () {
 
 }
 
+let humanScore = 0;
+let computerScore = 0;
