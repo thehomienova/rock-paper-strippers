@@ -24,27 +24,51 @@ function getHumanChoice () {
     return choice;
 }
 
-let computerScore = 0;
-let humanScore = 0;
 
-function playRound (computerChoice, humanChoice) {
-    if (computerChoice === humanChoice) {
-        console.log ("its a tie");
-    } else if (computerChoice === "rock" && humanChoice === "strippers") {
-        console.log("computer wins!");
-    } else if (computerChoice === "paper" && humanChoice === "rock") {
-        console.log("computer wins!");
-    } else if (computerChoice === "strippers" && humanChoice === "paper") {
-        console.log("computer wins!");
-    } else if (humanChoice === "rock" && computerChoice === "strippers") {
-        console.log("human wins!");
-    } else if (humanChoice === "paper" && computerChoice === "rock") {
-        console.log("human wins!");
-    } else if (humanChoice === "strippers" && computerChoice === "paper") {
-        console.log("human wins!");
+function playGame () {
+
+    let computerScore = 0;
+    let humanScore = 0;
+    let round = 1;
+    
+   
+    function playRound (computer, human) {
+        if (computer === human) {
+         console.log ("its a tie");
+        } else if (computer === "rock" && human === "strippers") {
+            console.log("computer wins!");
+            computerScore += 1;
+        } else if (computer === "paper" && human === "rock") {
+            console.log("computer wins!");
+            computerScore += 1;
+        } else if (computer === "strippers" && human === "paper") {
+            console.log("computer wins!");
+            computerScore += 1;
+        } else if (human === "rock" && computer === "strippers") {
+            console.log("human wins!");
+            humanScore += 1;
+        } else if (human === "paper" && computer === "rock") {
+            console.log("human wins!");
+            humanScore += 1;
+        } else if (human === "strippers" && computer === "paper") {
+            console.log("human wins!");
+            humanScore += 1;
+        }
     }
- 
+    
+    while (round < 6) {
+        playRound(getComputerChoice(), getHumanChoice());
+        round += 1;
+        console.log(computerScore, humanScore);
+    }
 
- }
+    if (humanScore > computerScore) {
+        console.log("HUMANS RULE");
+    } else {
+        console.log("COMPUTERS RULE");
+    }
 
-playRound(getComputerChoice(), getHumanChoice());
+}
+
+
+playGame();
