@@ -1,19 +1,40 @@
+body {
+    background-color: grey;
+}
+    
+#hands-container {
+    display: flex;
+    justify-content: center;
+}
+
 #choices-container {
     display: flex;
-    justify-content: space-between;
-    width: 50vh;
-   margin-bottom: 50px;
+    flex: 1 1 auto;
+    justify-content: space-around;
+    width: 100vw;
+    height: 20vh;
 }
 
 .choices {
-    height: 10vh;
-    width: 15vh;
+    height: 80%;
+    width: 25%;
     font-size: larger;
     color: yellow;
     background-color: black;
+    border: 2px solid yellow;
 }
 
-#results {
-  
-    
+#results-container {
+  border: 5px solid black;
+  display: flex;
+  flex: 1 1 auto;
+  height: 30vh;
+  width: 75vh;
+  flex-direction: column;
+  background-color: yellow;
+}
+
+.results {
+    font-size: larger;
+    padding-left: 5px;
 }

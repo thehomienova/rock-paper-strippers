@@ -31,34 +31,43 @@ let computerScore = document.querySelector("#computerScore");
 let computerScoreNumber = 0;
 let humanScoreNumber = 0;
 
+let resultImage = document.querySelector("#result-image");
+
 function playRound (computer, human) {
     round.textContent = "current round: ";
     if (computer === human) {
         round.textContent += "its a tie";
+        resultImage.src = "images/tie.jpg"
     } else if (computer === "rock" && human === "strippers") {
         round.textContent += "computer wins";
         computerScoreNumber += 1;
         computerScore.textContent = `computer: ${computerScoreNumber}`;
+        resultImage.src = "images/loser1.png"
     } else if (computer === "paper" && human === "rock") {
         round.textContent += "computer wins"
         computerScoreNumber += 1;
         computerScore.textContent = `computer: ${computerScoreNumber}`;
+        resultImage.src = "images/loser2.png"
     } else if (computer === "strippers" && human === "paper") {
         round.textContent += "computer wins"
         computerScoreNumber += 1;
         computerScore.textContent = `computer: ${computerScoreNumber}`;
+        resultImage.src = "images/loser1.png"
     } else if (human === "rock" && computer === "strippers") {
         round.textContent += "human wins"
         humanScoreNumber += 1;
         humanScore.textContent = `human: ${humanScoreNumber}`;
+        resultImage.src = "images/winner2.png"
     } else if (human === "paper" && computer === "rock") {
         round.textContent += "human wins"
         humanScoreNumber += 1;
         humanScore.textContent = `human: ${humanScoreNumber}`;
+        resultImage.src = "images/winner2.png"
     } else if (human === "strippers" && computer === "paper") {
         round.textContent += "human wins"
         humanScoreNumber += 1;
         humanScore.textContent = `human: ${humanScoreNumber}`;
+        resultImage.src = "images/winner1.png"
     }
 }
 
@@ -77,11 +86,6 @@ let strippers = document.querySelector("#strippers");
 strippers.addEventListener('click', () => {
     playRound(getComputerChoice(), "strippers");
 }); 
-
-let results = document.querySelector("#results");
-results.style.height = "30vh";
-results.style.width = "30vh";
-results.style.border = "5px solid black";
 
 
 
@@ -107,3 +111,16 @@ function playGame () {
 }
 
 
+function winOrLoseImage () {
+    const winnerImages =  [
+        'winner1.png', "winner2.png"
+    ];
+
+    const loserImages = [
+        "loser1.png", "loser2.png"
+    ];
+
+
+
+
+}
