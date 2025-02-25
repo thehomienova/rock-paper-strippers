@@ -111,16 +111,15 @@ function playGame () {
 }
 
 
-function winOrLoseImage () {
-    const winnerImages =  [
-        'winner1.png', "winner2.png"
-    ];
+let gameMusic = document.querySelector("#gameMusic");
 
-    const loserImages = [
-        "loser1.png", "loser2.png"
-    ];
-
-
-
-
+function playMusic () {
+    gameMusic.volume = 0.5;
+    gameMusic.play();
 }
+
+document.addEventListener("click", () => {
+    if (gameMusic.paused) {
+        playMusic();
+    }
+})
