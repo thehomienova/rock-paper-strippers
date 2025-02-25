@@ -1,0 +1,19 @@
+#choices-container {
+    display: flex;
+    justify-content: space-between;
+    width: 50vh;
+   margin-bottom: 50px;
+}
+
+.choices {
+    height: 10vh;
+    width: 15vh;
+    font-size: larger;
+    color: yellow;
+    background-color: black;
+}
+
+#results {
+  
+    
+}
