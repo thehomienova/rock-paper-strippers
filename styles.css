@@ -1,15 +1,32 @@
 body {
-    background-color: grey;
+    background: grey;
 }
     
+
 #hands-container {
     display: flex;
-    justify-content: center;
+    align-items: center; 
+    justify-content: center; 
+    gap: 20px;
+    
+    height: 30vh;
+    width: 80vw;
+}
+
+#bimage {
+    height: 80%;
+    width: auto; 
+}
+
+
+video {
+    height: 80%;
+    width: auto; 
+    flex-shrink: 0;
 }
 
 #choices-container {
     display: flex;
-    flex: 1 1 auto;
     justify-content: space-around;
     width: 100vw;
     height: 20vh;
@@ -29,7 +46,7 @@ body {
   display: flex;
   flex: 1 1 auto;
   height: 30vh;
-  width: 75vh;
+  width: 95vw;
   flex-direction: column;
   background-color: yellow;
 }
