@@ -45,7 +45,7 @@ video {
   border: 5px solid black;
   display: flex;
   flex: 1 1 auto;
-  height: 30vh;
+  height: 40vh;
   width: 95vw;
   flex-direction: column;
   flex-wrap: wrap;
